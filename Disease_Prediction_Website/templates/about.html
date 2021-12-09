@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
+    <title>Disease Predictions</title>
+    <link rel="stylesheet" href="static/mystyle.css" />
+    <style>
+        li {
+            float: left;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:darkgreen;
+            color: white;
+            text-align: left;
+            padding-top:15px;
+        }
+
+        table {
+            border-radius: 20px;
+            border-color: transparent;
+        }
+
+        .active {
+            color: white;
+            background-color: teal;
+        }
+        a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            background-color: darkslategrey;
+        }
+
+        .active {
+            color: white;
+            background-color: darkslategrey;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse fixed-top py-2" style="background-color:green;">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand" style="color:gainsboro;">Disease Prediction</a>
+            </div>
+            <div class="navbar-collapse">
+                <div class="nav navbar-nav">
+                    <ul style="padding-left: 15%;">
+                        <li>
+                            <a href="http://localhost:5555/home">Home</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:5555/predict">Predict</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:5555/about" class="active">About</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:5555/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr />
+    <h1> About Disease Prediction</h1>
+    <hr />
+    <p style="font-size:18px;">
+
+        This project is based on the predictive ability of Machine Learning. It is capable of predicing a disease from its symptoms. 
+        A user is required to populate the symptoms he/she is experiencing from the provided select boxes. It takes about 10 to 20 secomds to produce the most possible disease.
+        After the predctions, a user may connect to the nearest doctor. The symptoms stores every prediction outcome for future reference.  <br>
+        <hr />
+        <b style="color:darkgreen;font-size: 23px;font-family:'Times New Roman', Times, serif;margin-left:40%">Phases of development</b>
+        <hr />
+        <div style="margin-left:18%">
+            <b>Model Developement</b><br>
+            Support Vector Classifier model of the sklearn.svm package is developed.<br>
+            <b>Training</b> <br>
+            The model is trained on a dataset containing various diseases and their sysmptoms. <br>
+            <b>Testing</b><br>
+            The functionality of the model was tested using the real disease dataset. Average Performance was about 96.99%.<br>
+            <b>Deployment</b><br>
+            The system is deployed as a website using Python`s Flask framework. <br><br><br>
+            <i style="color:darkolivegreen">The functionality of this model is based on the accuracy of the dataset, to achieve better formance accurate data is needed.</i>
+
+        </div>
+    </p>
+    <div class="footer">
+        <p style="color:white;margin-left:0%">&copy; {{ year }} - Disease Prediction Application</p>
+    </div>
+</body>
+</html>
